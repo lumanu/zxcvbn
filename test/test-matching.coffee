@@ -537,13 +537,13 @@ test 'date matching', (t) ->
 
 test 'omnimatch', (t) ->
   t.deepEquals matching.omnimatch(''), [], "doesn't match ''"
-  password = 'r0sebudmaelstrom11/20/91aaaa'
+  password = 'r0sebudchristy11/20/91aaaa'
   matches = matching.omnimatch password
   for [pattern_name, [i, j]] in [
     [ 'dictionary',  [0, 6] ]
-    [ 'dictionary',  [7, 15] ]
-    [ 'date',        [16, 23] ]
-    [ 'repeat',      [24, 27] ]
+    [ 'dictionary',  [7, 13] ]
+    [ 'date',        [14, 21] ]
+    [ 'repeat',      [22, 25] ]
     ]
     included = false
     for match in matches
